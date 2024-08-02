@@ -1,0 +1,19 @@
+select placa,modelo from veiculo where modelo like 'FIAT%';
+select Estado,Nome from propietario where Estado in ('MG','RJ','PR') order by Estado, Nome;
+select * from veiculo where Valor_IPVA IS NULL order by placa,Valor_IPVA;
+select Estado,Cidade from propietario order by Estado,Cidade;
+select Ano_fabricacao, COUNT(*) as qtdVeic from veiculo group by Ano_fabricacao order by Ano_fabricacao ASC;
+select modelo, SUM(Valor_IPVA) as soma from veiculo group by Modelo having COUNT(*) > 2;
+select Valor_IPVA, SUM(Valor_IPVA) as soma from veiculo group by Cod_propietario order by Cod_propietario;
+select MAX(VAlor_IPVA), MIN(Valor_IPVA) from veiculo order by Ano_fabricacao;
+select placa,modelo from veiculo where Ano_fabricacao <> 1996 and Valor_IPVA between  150 and 200 order by placa,modelo;
+select Valor_IPVA,SUM(Valor_IPVA) as soma from veiculo group by Ano_fabricacao order by soma DESC;
+select AVG(Valor_IPVA) from veiculo group by modelo;
+select Cod_propietario, COUNT(*) as qntdVeic from veiculo group by Cod_Propietario having COUNT(*) > 2;
+select * from propietario where cidade like 'Belo Horizonte';
+select placa,Ano_fabricacao from veiculo where placa like 'G%75';
+select cidade, COUNT(*) as qntProp from propietario group by cidade;
+select modelo,Valor_IPVA,placa from veiculo where Ano_Fabricacao in ('1988','1990','1996','1997') and modelo like 'FORD%'
+and (Valor_IPVA < 200 or Valor_IPVA > 800);
+select Estado, COUNT(*) as qntProp from propietario group by Estado having count(*) > 3 order by qntProp DESC;
+update veiculo set Valor_IPVA = 1000 where Valor_IPVA IS NULL;
