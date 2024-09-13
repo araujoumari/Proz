@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "Nunito";
+    src:
+    url(fontes/Nunito-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Vidaloka";
+    src:
+    url(fontes/Vidaloka-Regular.ttf);
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --cor1:#1C2607; 
+    --cor2:#A6A165;
+    --cor3:#A69E86;
+    --cor4:#D9D3C1;
+    --cor5:#0D0D0D;
+    --cor6: white;
+
+    /* cor1: Verde Escuro
+       cor2: Verde Claro
+       cor3: Cinza Escuro
+       cor4: Cinza Claro
+       cor5: Preto
+       cor6: Branco
+    */    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 5% 25% auto 5%;
+    grid-template-rows: 20% 3% 90% 2%;
+    grid-template-areas: "cabecalho cabecalho cabecalho cabecalho"
+    "menu menu menu menu"
+    "espaco esquerda conteudo epaco"
+    "rodape rodape rodape rodape";
+
+    background-color: var(--cor3);
+}
+
+header {
+    grid-area: cabecalho;
+
+    color: white;
+    background-color: var(--cor1);
+    font-family: Vidaloka;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+header > h1 {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+header > img {
+    margin-top: 20px;
+}
+
+nav {
+    display: flex;
+    grid-area: menu;
+
+    color: white;
+    background-color: var(--cor1);
+}
+
+nav > .navItem {
+    margin-left: 80px;
+
+
+    background-color: var(--cor1);
+}
+
+nav > .navItemL {
+    padding: 10px;
+    margin-left: 80px;
+
+    font-weight: bold;
+    color: black;
+    background-color: var(--cor6);
+}
+
+main {
+    grid-area: conteudo;
+
+    font-family: Nunito;
+    background-color: var(--cor6);
+}
+
+main > .lirio {
+    padding: 40px;
+    text-align: justify;
+}
+
+.lirio > h1 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.lirio > h2 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.lateralEsquerda {
+    grid-area: esquerda;
+
+    font-family: Nunito;
+    font-size: small;
+    text-align: justify;
+    background-color: var(--cor4);
+}
+
+.lateralEsquerda > #imgEsq {
+    margin: 50px;
+}
+
+.lateralEsquerda > #dado1{
+    font-family: Nunito;
+    font-size: small;
+    text-align: justify;
+
+    margin: 20px;
+}
+
+#dado2 {
+    margin: 20px;
+}
+
+#dado2 > h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.espaco {
+    grid-area: espaco;
+}
+
+footer {
+    grid-area: rodape;
+
+    background-color: var(--cor5);
+    color: white;
+    font-family: Nunito;
+    font-size: smaller;
+    text-align: center;
+
+    padding: 5px;
+
+}
+
