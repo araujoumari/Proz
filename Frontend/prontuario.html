@@ -16,13 +16,13 @@
             <input type="date" name="dataNasc">
             <br>
             <label for="telefone">Telefone: </label>
-            <input type="number" name="telefone">
+            <input type="text" name="telefone">
             <br>
             <label for="email">Email:</label>
             <input type="email" name="email">
             <br>
             <label for="cpf">CPF:</label>
-            <input type="number" name="cpf">
+            <input type="text" name="cpf">
             <br>
             <label for="senha">Senha: </label>
             <input type="password" name="senha">
@@ -34,7 +34,7 @@
             </select>
             <br>
             <label for="altura">Altura: (em cm) </label>
-            <input type="number">
+            <input type="number" step="0.01">
             <br>
             <label for="notas">Notas Adicionais:</label><br>
             <textarea name="notas" rows="4" cols="50"></textarea><br><br>
@@ -58,14 +58,14 @@
             </thead>
             <tbody>
                 <tr>
-                    <th>20/08/2024</th>
-                    <th>Dr. João Silva</th>
-                    <th>Hipertensão</th>
+                    <td>20/08/2024</td>
+                    <td>Dr. João Silva</td>
+                    <td>Hipertensão</td>
                 </tr>
                 <tr>
-                    <th>15/07/2024</th>
-                    <th>Dra. Maria Oliveira</th>
-                    <th>Diabetes Tipo 2</th>
+                    <td>15/07/2024</td>
+                    <td>Dra. Maria Oliveira</td>
+                    <td>Diabetes Tipo 2</td>
                 </tr>
 
             </tbody>
@@ -77,9 +77,9 @@
             <h1>Medicamentos Prescritos</h1>
             <thead>
                 <tr>
-                    <td>Medicamento</td>
-                    <td>Dosagem</td>
-                    <td>Instruções</td>
+                    <th>Medicamento</th>
+                    <th>Dosagem</th>
+                    <th>Instruções</th>
                 </tr>
             </thead>
             <tbody>
@@ -101,9 +101,9 @@
             <h1>Resultados de Exames</h1>
             <thead>
                 <tr>
-                    <td>Data</td>
-                    <td>Tipo de Exame</td>
-                    <td>Resultado</td>
+                    <th>Data</th>
+                    <th>Tipo de Exame</th>
+                    <th>Resultado</th>
                 </tr>        
             </thead>
             <tbody>
@@ -125,9 +125,9 @@
             <h1>Histórico de Cirurgias</h1>
             <thead>
                 <tr>
-                    <td>Data</td>
-                    <td>Cirurgia</td>
-                    <td>Observações</td>
+                    <th>Data</th>
+                    <th>Cirurgia</th>
+                    <th>Observações</th>
                 </tr>
             </thead>
             <tbody>
